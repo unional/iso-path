@@ -1,0 +1,34 @@
+{
+  "name": "iso-path",
+  "version": "0.0.0-development",
+  "description": "Isomorphic path utility.",
+  "homepage": "https://github.com/unional/iso-path",
+  "bugs": {
+    "url": "https://github.com/unional/iso-path/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/iso-path.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf lib",
+    "dc": "npm run dependency-check",
+    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "verify": "npm run lint && npm run build && npm run dependency-check && jest --coverage",
+    "watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@unional/devpkg-node": "^1.2.2",
+    "assertron": "^6.0.0"
+  }
+}
