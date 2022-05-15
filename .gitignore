@@ -1,5 +1,6 @@
 # OSX
 .DS_Store
+._*
 
 # Logs
 logs
@@ -41,7 +42,17 @@ node_modules
 # webstorm
 .idea
 
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # project folders
-dist*
-lib
-out*
+cjs
+docs
+esm
+*.tsbuildinfo

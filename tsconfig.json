@@ -1,14 +1,10 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "tslint-language-service"
-      }
-    ]
+    "noEmit": true
   },
   "include": [
-    "src",
+    "ts",
     "typings"
   ]
 }

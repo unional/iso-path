@@ -1,0 +1,9 @@
+ignores:
+  - '@types/node'
+  - "@commitlint/*"
+  - "@size-limit/preset-small-lib"
+  - "@types/jest"
+  - "babel-jest"
+  - "jest-junit"
+  - typedoc
+  - typedoc-plugin-extras
