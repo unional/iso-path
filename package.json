@@ -1,5 +1,5 @@
 {
-  "name": "iso-path",
+  "name": "@unional/iso-path",
   "version": "0.0.0-development",
   "description": "Isomorphic path utility.",
   "homepage": "https://github.com/unional/iso-path",
@@ -17,18 +17,60 @@
   },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "clean": "rimraf lib",
-    "dc": "npm run dependency-check",
-    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
-    "lint": "tslint -p tsconfig.json",
+    "build:doc": "typedoc",
+    "clean": "rimraf lib coverage",
+    "coverage": "jest --coverage",
+    "coverage:node": "yarn test:node --coverage",
+    "coverage:jsdom": "yarn test:jsdom --coverage",
+    "depcheck": "depcheck",
+    "lint": "eslint --ext=ts,js .",
+    "nuke": "yarn clean && rimraf node_modules",
+    "prepare": "husky install",
+    "release": "npx semantic-release",
+    "size-limit": "size-limit",
     "test": "jest",
-    "verify": "npm run lint && npm run build && npm run dependency-check && jest --coverage",
+    "test:node": "jest -c ./jest.config.node.js",
+    "test:jsdom": "jest -c ./jest.config.jsdom.js",
+    "test:types": "tsc",
+    "verify": "run-p verify:build lint test:types coverage",
+    "verify:build": "npm-run-all clean build -p depcheck size-limit",
     "watch": "jest --watch"
   },
+  "dependencies": {
+    "path-equal": "^1.1.3"
+  },
   "devDependencies": {
-    "@unional/devpkg-node": "^1.2.2",
-    "assertron": "^6.0.0"
-  }
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.15.0",
+    "eslint-plugin-harmony": "^7.0.2",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "jest-validate": "^28.1.0",
+    "jest-watch-suspend": "^1.1.2",
+    "jest-watch-toggle-config": "^2.0.1",
+    "jest-watch-typeahead": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "size-limit": "^7.0.8",
+    "typescript": "^4.7.1-rc"
+  },
+  "packageManager": "yarn@3.2.1",
+  "size-limit": [
+    {
+      "limit": "10 kb"
+    }
+  ]
 }
