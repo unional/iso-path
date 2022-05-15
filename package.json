@@ -1,6 +1,6 @@
 {
   "name": "@unional/iso-path",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Isomorphic path utility.",
   "homepage": "https://github.com/unional/iso-path",
   "bugs": {
