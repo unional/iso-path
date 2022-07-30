@@ -48,7 +48,7 @@
     "@changesets/cli": "^2.22.0",
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@size-limit/preset-small-lib": "^7.0.8",
+    "@size-limit/preset-small-lib": "^8.0.0",
     "@types/jest": "^28.0.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "depcheck": "^1.4.3",
