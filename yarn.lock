@@ -2918,7 +2918,7 @@ __metadata:
     npm-run-all: ^4.1.5
     path-equal: ^1.1.3
     rimraf: ^5.0.0
-    size-limit: ^8.0.0
+    size-limit: ^9.0.0
     typescript: ^5.0.0
   languageName: unknown
   linkType: soft
@@ -3611,13 +3611,6 @@ __metadata:
   version: 3.3.1
   resolution: "ci-info@npm:3.3.1"
   checksum: 244546317cca96955860d2cb8d0bf47dd66d9078bbe83a215fa87464ab24b352c6fc6f56027d1c82f002e3f833be253f1320d35ed7199bd81134f7788c657f3a
-  languageName: node
-  linkType: hard
-
-"ci-job-number@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "ci-job-number@npm:1.2.2"
-  checksum: 9da8edd2c1d79e59f28e1c62e8f9f2611c29d6e470cd02551fcb8b5f5eaed6385711b9c5e3fb3b9c456dc716058fc48b4a9e38783bc378a26a8c7d4ed1348211
   languageName: node
   linkType: hard
 
@@ -6192,13 +6185,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "lilconfig@npm:2.0.6"
-  checksum: 40a3cd72f103b1be5975f2ac1850810b61d4053e20ab09be8d3aeddfe042187e1ba70b4651a7e70f95efa1642e7dc8b2ae395b317b7d7753b241b43cef7c0f7d
-  languageName: node
-  linkType: hard
-
 "lilconfig@npm:^2.1.0":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
@@ -7713,7 +7699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:9.0.0":
+"size-limit@npm:9.0.0, size-limit@npm:^9.0.0":
   version: 9.0.0
   resolution: "size-limit@npm:9.0.0"
   dependencies:
@@ -7726,24 +7712,6 @@ __metadata:
   bin:
     size-limit: bin.js
   checksum: c20d5d24aa4edf931234a009067ffe4b7cc4e0e00d944684990284838910b556ba35f91a3c30e604e00037b21df346c966c0205f7539a0e50cb75852c07bb9d7
-  languageName: node
-  linkType: hard
-
-"size-limit@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "size-limit@npm:8.0.0"
-  dependencies:
-    bytes-iec: ^3.1.1
-    chokidar: ^3.5.3
-    ci-job-number: ^1.2.2
-    globby: ^11.1.0
-    lilconfig: ^2.0.6
-    mkdirp: ^1.0.4
-    nanospinner: ^1.1.0
-    picocolors: ^1.0.0
-  bin:
-    size-limit: bin.js
-  checksum: 727b65e3c3717c1b8f67b31d285e325416062ad83f9b0d976554388344a7c2d73be64b8a5ed02846d4d8bb3bd5033e23c981dedf91684f54873b85c6c21e78a4
   languageName: node
   linkType: hard
 
