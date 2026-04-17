@@ -65,7 +65,7 @@
     "size-limit": "^12.0.0",
     "typescript": "^6.0.0"
   },
-  "packageManager": "yarn@4.14.0",
+  "packageManager": "yarn@4.14.1",
   "size-limit": [
     {
       "limit": "10 kb"
